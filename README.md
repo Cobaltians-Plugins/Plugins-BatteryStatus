@@ -5,8 +5,8 @@ The BatteryStatus plugin allows you to get battery status information.
 ## How to use
 
 - Import the plugin to your project as explained [here](https://github.com/cobaltians/cobalt/wiki/Plugins-usage)
-- Add the cobalt.batteryStatus.js to your web JS folder
-- Add a html link to the cobalt.batteryStatus.js plugin after the cobalt link in the `<head>` tag
+- Add the `cobalt.batteryStatus.js` to your web JS folder
+- Add a html `<link>` to the `cobalt.batteryStatus.js` file after the cobalt link in the `<head>` tag
 
 ## Getting the battery state
 
@@ -62,7 +62,7 @@ Additionnaly, you can get the battery level as percentage:
       cobalt.log('Battery level: ', level, '%');
     });
 
-If the battery level could not be retrieved, the value `-1` is returned.
+If the battery level could not be retrieved, the value `-1` is returned. Also, on some devices the battery level may be rounded; for example by 5% on iOS 7 devices.
 
 *Note*: you should not rely on the battery level to trigger actions in your application. Instead, use the battery state.
 
